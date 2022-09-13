@@ -74,9 +74,22 @@
         "serial_port": {
             "origin": "uses-uart",
             "type": "string"
+        },
+        "units": {
+            "default": null,
+            "doc": "Units string. If not specified, will attempt to pull units off of hardware.",
+            "type": [
+                "null",
+                "string"
+            ]
         }
     },
     "doc": "",
+    "hardware": [
+        "omega:dp32pt",
+        "omega:dp16pt",
+        "omega:dp8pt"
+    ],
     "installation": {
         "PyPI": "https://pypi.org/project/yaqd-omega"
     },

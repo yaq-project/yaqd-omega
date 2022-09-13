@@ -12,9 +12,7 @@ CURRENT_VALUE_ADDRESS = 528
 PEAK_VALUE_ADDRESS = 550
 VALLEY_VALUE_ADDRESS = 552
 UNITS_ADDRESS = 585
-UNITS = {0: None,
-         1: "degC",
-         2: "degF"}
+UNITS = {0: None, 1: "degC", 2: "degF"}
 
 
 # https://assets.omega.com/manuals/M5458.pdf
