@@ -1,6 +1,7 @@
 protocol = "omega-platinum"
 doc = ""
-traits = ["is-daemon"]
+traits = ["is-daemon", "is-sensor", "uses-serial", "uses-uart", "has-measure-trigger"]
+hardware = ["omega:dp32pt", "omega:dp16pt", "omega:dp8pt"]
 
 [links]
 source = "https://github.com/yaq-project/yaqd-omega"
@@ -11,7 +12,11 @@ PyPI = "https://pypi.org/project/yaqd-omega"
 
 [config]
 
+[config.units]
+doc = "Units string. If not specified, will attempt to pull units off of hardware."
+type=["null", "string"]
+default = "__null__"
+
 [state]
 
 [messages]
-
