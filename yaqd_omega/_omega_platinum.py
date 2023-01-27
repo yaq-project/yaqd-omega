@@ -55,5 +55,4 @@ class OmegaPlatinum(UsesUart, UsesSerial, HasMeasureTrigger, IsSensor, IsDaemon)
         out["valley"] = struct.unpack(">f", b)[0]
         if self._looping:
             await asyncio.sleep(0.1)
-        print(out)
         return out
