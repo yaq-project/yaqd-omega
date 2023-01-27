@@ -4,7 +4,7 @@ import asyncio
 from typing import Dict, Any, List
 import struct
 
-from pymodbus.client.sync import ModbusSerialClient  # type: ignore
+from pymodbus.client import ModbusSerialClient  # type: ignore
 from yaqd_core import IsSensor, UsesSerial, UsesUart, HasMeasureTrigger, IsDaemon
 
 
@@ -21,8 +21,8 @@ class OmegaPlatinum(UsesUart, UsesSerial, HasMeasureTrigger, IsSensor, IsDaemon)
 
     def __init__(self, name, config, config_filepath):
         super().__init__(name, config, config_filepath)
-        self.client = ModbusSerialClient(port="/dev/ttyACM0", method="RTU")
-        self.client.baudrate = 19_200
+        self.client = ModbusSerialClient(port=self._config["serial_port"], method="RTU")
+        self.client.baudrate = self._config["baud_rate"]
         self.client.parity = "O"
         self.client.bytesize = 8
         self.client.stopbits = 1
@@ -55,5 +55,4 @@ class OmegaPlatinum(UsesUart, UsesSerial, HasMeasureTrigger, IsSensor, IsDaemon)
         out["valley"] = struct.unpack(">f", b)[0]
         if self._looping:
             await asyncio.sleep(0.1)
-        print(out)
         return out
