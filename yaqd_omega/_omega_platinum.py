@@ -4,7 +4,7 @@ import asyncio
 from typing import Dict, Any, List
 import struct
 
-from pymodbus.client.sync import ModbusSerialClient  # type: ignore
+from pymodbus.client import ModbusSerialClient  # type: ignore
 from yaqd_core import IsSensor, UsesSerial, UsesUart, HasMeasureTrigger, IsDaemon
 
 
