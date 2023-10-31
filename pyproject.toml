@@ -10,6 +10,7 @@ home-page = "https://yaq.fyi"
 description-file = "README.md"
 requires-python = ">=3.7"
 requires = ["yaqd-core>=2020.06.3",
+            "minimalmodbus",
             "pymodbus>=3.1"]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
@@ -33,7 +34,7 @@ dev = ["black", "pre-commit"]
 
 [tool.flit.scripts]
 yaqd-omega-platinum = "yaqd_omega._omega_platinum:OmegaPlatinum.main"
-
+yaqd-omega-iseries-modbus = "yaqd_omega._omega_iseries_modbus:OmegaIseriesModbus.main"
 
 [tool.black]
 line-length = 99
