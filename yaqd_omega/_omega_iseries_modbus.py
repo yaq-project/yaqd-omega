@@ -4,7 +4,7 @@ import asyncio
 from typing import Dict, Any, List
 import struct
 
-import minimalmodbus
+import minimalmodbus  # type: ignore
 from yaqd_core import UsesSerial, UsesUart, IsDaemon, HasPosition
 
 
