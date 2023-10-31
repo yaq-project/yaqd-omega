@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Added
+- new daemon for iseries controllers supporting modbus
+
 ## [2023.1.0]
 
 ### Changed
