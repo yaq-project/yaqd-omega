@@ -1,0 +1,50 @@
+protocol = "omega-iseries-modbus"
+doc = ""
+traits = ["is-daemon", "uses-serial", "uses-uart", "has-position"]
+hardware = ["omega:cni32", "omega:cni16"]
+
+[links]
+source = "https://github.com/yaq-project/yaqd-omega"
+bugtracker = "https://github.com/yaq-project/yaqd-omega/-/issues"
+
+[installation]
+PyPI = "https://pypi.org/project/yaqd-omega"
+
+[config]
+
+[config.units]
+doc = "Units string."
+type=["null", "string"]
+default = "degC"
+
+[config.baud_rate]
+default = 9600
+
+[config.byte_size]
+type = "int"
+doc = "Byte size of your instrument."
+default = 8
+
+[config.stop_bits]
+type = {"type"="enum", "name"="stop_bits", "symbols"=["one", "one_and_half", "two"]}
+doc = "Number of stop bits."
+default = "one"
+
+[config.parity]
+type = {"type"="enum", "name"="parity", "symbols"=["even", "odd", "none"]}
+doc = "Modbus parity."
+default = "none"
+
+[config.modbus_handle_echo]
+type = "boolean"
+doc = "Configure echo handling."
+default = true
+
+[config.modbus_address]
+type = "int"
+doc = "Unique address in the modbus network."
+default = 1
+
+[state]
+
+[messages]
