@@ -27,5 +27,5 @@ jobs:
       run: |
         yaqd-omega-platinum --version
         yaqd-omega-platinum --help
-	yaqd-omega-iseries-modbus --version
-	yaqd-omega-iseries-modbus --help
+        yaqd-omega-iseries-modbus --version
+        yaqd-omega-iseries-modbus --help
