@@ -24,9 +24,11 @@ class OmegaIseriesModbus(UsesUart, UsesSerial, HasPosition, IsDaemon):
     def __init__(self, name, config, config_filepath):
         print(config)
         super().__init__(name, config, config_filepath)
-        self.client = minimalmodbus.Instrument(port=self._config["serial_port"],
-                                               slaveaddress=self._config["modbus_address"],
-                                               debug=False)
+        self.client = minimalmodbus.Instrument(
+            port=self._config["serial_port"],
+            slaveaddress=self._config["modbus_address"],
+            debug=False,
+        )
         self.client.serial.baudrate = self._config["baud_rate"]
         self.client.serial.parity = parity_options[self._config["parity"]]
         self.client.serial.bytesize = self._config["byte_size"]
@@ -39,9 +41,7 @@ class OmegaIseriesModbus(UsesUart, UsesSerial, HasPosition, IsDaemon):
     def _set_position(self, position: float) -> None:
         out = int(position * 10)
         try:
-            self.client.write_register(registeraddress=SV_REGISTER,
-                                    value=out,
-                                    functioncode=0x06)
+            self.client.write_register(registeraddress=SV_REGISTER, value=out, functioncode=0x06)
         except minimalmodbus.NoResponseError:
             self._set_position(position=position)
 
