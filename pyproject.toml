@@ -33,6 +33,7 @@ Issues = "https://github.com/yaq-project/yaqd-omega/issues"
 dev = ["black", "pre-commit"]
 
 [tool.flit.scripts]
+yaqd-omega-d8200 = "yaqd_omega._omega_d8200:OmegaD8200.main"
 yaqd-omega-platinum = "yaqd_omega._omega_platinum:OmegaPlatinum.main"
 yaqd-omega-iseries-modbus = "yaqd_omega._omega_iseries_modbus:OmegaIseriesModbus.main"
 

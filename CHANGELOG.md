@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 - new daemon for iseries controllers supporting modbus
+- new daemon omega-d8200
 
 ## [2023.1.0]
 

@@ -25,6 +25,8 @@ jobs:
         python -m pip install --upgrade .
     - name: Run entry points
       run: |
+        yaqd-omega-d8200 --version
+        yaqd-omega-d8200 --help
         yaqd-omega-platinum --version
         yaqd-omega-platinum --help
         yaqd-omega-iseries-modbus --version
