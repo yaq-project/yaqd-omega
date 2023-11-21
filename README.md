@@ -11,6 +11,7 @@ yaq daemons for Omega Engineering hardware
 
 This package contains the following daemon(s):
 
+- https://yaq.fyi/daemons/omega-d8200
 - https://yaq.fyi/daemons/omega-iseries-modbus
 - https://yaq.fyi/daemons/omega-platinum
 
