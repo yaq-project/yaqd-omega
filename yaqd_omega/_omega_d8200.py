@@ -43,7 +43,7 @@ class OmegaD8200(UsesUart, UsesSerial, IsSensor, IsDaemon):
         while True:
             await asyncio.sleep(0.5)
             out = dict()
-            rawl = self.client.read_registers(48, 7, functioncode=3) 
+            rawl = self.client.read_registers(48, 7, functioncode=3)
             # data is stored as offset binary
             # by xoring into 0x80_00, I can convert into twos complement shorts
             shortl = [i ^ 0x80_00 for i in rawl]
