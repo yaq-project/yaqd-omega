@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [2024.2.0]
+
+### fixed
+- d8200 uses split binary, not twos-complement
+
 ## [2023.11.0]
 
 ### Added
