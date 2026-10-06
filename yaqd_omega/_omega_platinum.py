@@ -7,7 +7,6 @@ import struct
 from pymodbus.client import ModbusSerialClient  # type: ignore
 from yaqd_core import IsSensor, UsesSerial, UsesUart, HasMeasureTrigger, IsDaemon
 
-
 CURRENT_VALUE_ADDRESS = 528
 PEAK_VALUE_ADDRESS = 550
 VALLEY_VALUE_ADDRESS = 552
